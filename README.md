@@ -2,7 +2,7 @@
 
 ## 介绍
 基于**[MatchZy](https://github.com/shobhit-pathak/MatchZy)** v0.7(24年2月更新)的汉化版(有些翻译不准90%的内容进行了汉化和优化提示文本)  CS2满十跑图插件
-
+[Github仓库](https://github.com/L1mit1337/MatchZyCN)
 
 
 
