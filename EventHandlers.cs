@@ -280,7 +280,7 @@ public partial class MatchZy
         if (!isPractice || isDryRun) return HookResult.Continue;
         if(lastGrenadeThrownTime.TryGetValue(@event.Entityid, out var thrownTime)) 
         {
-            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}扔出烟雾弹,从投掷到引爆花了 {ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
+            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}投掷烟雾弹,飞行时间 {ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
             lastGrenadeThrownTime.Remove(@event.Entityid);
         }
         return HookResult.Continue;
@@ -291,7 +291,7 @@ public partial class MatchZy
         if (!isPractice || isDryRun) return HookResult.Continue;
         if(lastGrenadeThrownTime.TryGetValue(@event.Entityid, out var thrownTime)) 
         {
-            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}扔出闪光弹,从投掷到引爆花了{ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
+            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}投掷闪光弹,飞行时间 {ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
             lastGrenadeThrownTime.Remove(@event.Entityid);
         }
         return HookResult.Continue;
@@ -302,7 +302,7 @@ public partial class MatchZy
         if (!isPractice || isDryRun) return HookResult.Continue;
         if(lastGrenadeThrownTime.TryGetValue(@event.Entityid, out var thrownTime)) 
         {
-            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}扔出手雷,从投掷到引爆花了{ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
+            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}投掷手雷,飞行时间 {ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
             lastGrenadeThrownTime.Remove(@event.Entityid);
         }
         return HookResult.Continue;
@@ -314,7 +314,7 @@ public partial class MatchZy
         if (!isPractice || isDryRun) return HookResult.Continue;
         if(lastGrenadeThrownTime.TryGetValue(@event.Get<int>("entityid"), out var thrownTime)) 
         {
-            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}扔出燃烧瓶/弹,从投掷到引爆花了{ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
+            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}投掷燃烧瓶/弹,飞行时间 {ChatColors.Green}{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
             lastGrenadeThrownTime.Remove(@event.Get<int>("entityid"));
         }
         return HookResult.Continue;
@@ -325,7 +325,7 @@ public partial class MatchZy
         if (!isPractice || isDryRun) return HookResult.Continue;
         if(lastGrenadeThrownTime.TryGetValue(@event.Entityid, out var thrownTime)) 
         {
-            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}扔出诱饵弹,从投掷到引爆花了{(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
+            PrintToPlayerChat(@event.Userid, $"玩家{ChatColors.Orange}{@event.Userid.PlayerName} {ChatColors.Default}投掷诱饵弹,飞行时间 {(DateTime.Now - thrownTime).TotalSeconds:0.00}{ChatColors.Default}秒");
             lastGrenadeThrownTime.Remove(@event.Entityid);
         }
         return HookResult.Continue;
